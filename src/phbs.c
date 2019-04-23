@@ -47,11 +47,11 @@
 #include "filegen.h"
 #include "photorec.h"
 #include "log.h"
-#include "file_tar.h"
+#include "file_scanner/file_tar.h"
 #include "pnext.h"
 #include "phnc.h"
 #include "phbs.h"
-#include "file_found.h"
+#include "file_scanner/file_found.h"
 
 #define READ_SIZE 1024*512
 extern const file_hint_t file_hint_tar;

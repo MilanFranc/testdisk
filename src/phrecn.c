@@ -66,7 +66,7 @@
 #include "phrecn.h"
 #include "log.h"
 #include "log_part.h"
-#include "file_tar.h"
+#include "file_scanner/file_tar.h"
 #include "phcfg.h"
 #include "pblocksize.h"
 #include "askloc.h"
@@ -75,7 +75,7 @@
 #include "phbf.h"
 #include "phnc.h"
 #include "phbs.h"
-#include "file_found.h"
+#include "file_scanner/file_found.h"
 #include "dfxml.h"
 #include "poptions.h"
 #include "psearchn.h"
@@ -291,7 +291,7 @@ int photorec(struct ph_param *params, const struct ph_options *options, alloc_da
   xml_open(params->recup_dir, params->dir_num);
   xml_setup(params->disk, params->partition);
 #endif
-  
+
   for(params->pass=0; params->status!=STATUS_QUIT; params->pass++)
   {
     const unsigned int old_file_nbr=params->file_nbr;

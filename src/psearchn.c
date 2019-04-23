@@ -59,9 +59,9 @@
 #include "photorec.h"
 #include "sessionp.h"
 #include "log.h"
-#include "file_tar.h"
+#include "file_scanner/file_tar.h"
 #include "pnext.h"
-#include "file_found.h"
+#include "file_scanner/file_found.h"
 #include "psearch.h"
 #ifdef HAVE_NCURSES
 #include "intrfn.h"
@@ -82,7 +82,7 @@ pstatus_t photorec_aux(struct ph_param *params, const struct ph_options *options
   time_t next_checkpoint;
   pstatus_t ind_stop=PSTATUS_OK;
   unsigned int buffer_size;
-  const unsigned int blocksize=params->blocksize; 
+  const unsigned int blocksize=params->blocksize;
   const unsigned int read_size=(blocksize>65536?blocksize:65536);
   uint64_t offset_before_back=0;
   unsigned int back=0;
@@ -152,7 +152,7 @@ pstatus_t photorec_aux(struct ph_param *params, const struct ph_options *options
 	if(file_recovery.handle!=NULL)
 	{
 	  if(fwrite(buffer,blocksize,1,file_recovery.handle)<1)
-	  { 
+	  {
 	    log_critical("Cannot write to file %s: %s\n", file_recovery.filename, strerror(errno));
 	    if(errno==EFBIG)
 	    {

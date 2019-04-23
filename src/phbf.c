@@ -64,7 +64,7 @@
 #include "phrecn.h"
 #include "log.h"
 #include "log_part.h"
-#include "file_tar.h"
+#include "file_scanner/file_tar.h"
 #include "phcfg.h"
 #include "pblocksize.h"
 #include "pnext.h"
@@ -218,7 +218,7 @@ pstatus_t photorec_bf(struct ph_param *params, const struct ph_options *options,
 	  if(file_recovery.file_stat->file_hint->recover==1)
 	  {
 	    if(!(file_recovery.handle=fopen(file_recovery.filename,"w+b")))
-	    { 
+	    {
 	      log_critical("Cannot create file %s: %s\n", file_recovery.filename, strerror(errno));
 	      ind_stop=PSTATUS_EACCES;
 	    }
@@ -227,7 +227,7 @@ pstatus_t photorec_bf(struct ph_param *params, const struct ph_options *options,
 	if(need_to_check_file==0 && file_recovery.handle!=NULL && file_recovery.file_stat!=NULL)
 	{
 	  if(fwrite(buffer,blocksize,1,file_recovery.handle)<1)
-	  { 
+	  {
 	    log_critical("Cannot write to file %s: %s\n", file_recovery.filename, strerror(errno));
 	    ind_stop=PSTATUS_ENOSPC;
 	  }
