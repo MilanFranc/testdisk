@@ -54,7 +54,7 @@ struct MIG_HDR
   uint32_t unk2;
   uint32_t unk3;
   unsigned char fn[0];
-} __attribute__ ((gcc_struct, __packed__));
+} __attribute__ ((__packed__));
 
 static void file_check_mig(file_recovery_t *file_recovery)
 {

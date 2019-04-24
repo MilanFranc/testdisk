@@ -52,7 +52,7 @@ struct qbb_header
  uint16_t data_len;
  uint16_t unk1;
  unsigned char data[0];
-} __attribute__ ((gcc_struct, __packed__));
+} __attribute__ ((__packed__));
 
 struct qbb_header02
 {
@@ -65,7 +65,7 @@ struct qbb_header02
  uint8_t  unk3[10];
  uint16_t title_len;
  uint8_t  title[0];
-} __attribute__ ((gcc_struct, __packed__));
+} __attribute__ ((__packed__));
 
 static void file_rename_qbb(file_recovery_t *file_recovery)
 {

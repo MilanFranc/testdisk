@@ -60,7 +60,7 @@ struct psb_file_header
   uint32_t width;	/* max of 300,000 */
   uint16_t depth;	/* 1, 8, 16 or 32 */
   uint16_t color_mode;	/* Bitmap = 0; Grayscale = 1; Indexed = 2; RGB = 3; CMYK = 4; Multichannel = 7; Duotone = 8; Lab = 9 */
-} __attribute__ ((gcc_struct, __packed__));
+} __attribute__ ((__packed__));
 
 static int header_check_psb(const unsigned char *buffer, const unsigned int buffer_size, const unsigned int safe_header_only, const file_recovery_t *file_recovery, file_recovery_t *file_recovery_new)
 {

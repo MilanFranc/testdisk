@@ -63,7 +63,7 @@ struct InDesignMasterPage {
   uint8_t  fIrrelevant2 [8];
   uint32_t fFilePages;
   uint8_t  fIrrelevant3 [3812];
-} __attribute__ ((gcc_struct, __packed__));
+} __attribute__ ((__packed__));
 
 struct InDesignContigObjMarker {
   uint8_t  fGUID [16];
@@ -71,7 +71,7 @@ struct InDesignContigObjMarker {
   uint32_t fObjectClassID;
   uint32_t fStreamLength;
   uint32_t fChecksum;
-} __attribute__ ((gcc_struct, __packed__));
+} __attribute__ ((__packed__));
 
 static void file_check_indd(file_recovery_t *file_recovery)
 {

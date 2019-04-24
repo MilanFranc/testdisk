@@ -30,7 +30,7 @@ struct ReFS_boot_sector {
   uint32_t	identifier;
   uint16_t	length;
   uint16_t	checksum;
-} __attribute__ ((gcc_struct, __packed__));
+} __attribute__ ((__packed__));
 
 int check_ReFS(disk_t *disk, partition_t *partition);
 int recover_ReFS(const disk_t *disk, const struct ReFS_boot_sector *refs_header, partition_t *partition);

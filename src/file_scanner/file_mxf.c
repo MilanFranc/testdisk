@@ -63,7 +63,7 @@ struct partition_pack_next
   uint32_t body_SID;
   char	   op_pattern[16];
   char     essence_container[0];
-} __attribute__ ((gcc_struct, __packed__));
+} __attribute__ ((__packed__));
 
 static data_check_t data_check_mxf(const unsigned char *buffer, const unsigned int buffer_size, file_recovery_t *file_recovery)
 {

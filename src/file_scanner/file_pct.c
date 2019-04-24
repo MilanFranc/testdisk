@@ -77,7 +77,7 @@ struct pct_file_entry {
   uint16_t OYMax;
 #endif
   uint32_t Reserved2;		/* 0x24 */
-} __attribute__ ((gcc_struct, __packed__));
+} __attribute__ ((__packed__));
 
 static int header_check_pct(const unsigned char *buffer, const unsigned int buffer_size, const unsigned int safe_header_only, const file_recovery_t *file_recovery, file_recovery_t *file_recovery_new)
 {

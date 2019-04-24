@@ -80,7 +80,7 @@ struct pgdmp_hdr
   /* 1.10 */
   /* remoteVersionStr */
   /* PG_VERSION */
-} __attribute__ ((gcc_struct, __packed__));
+} __attribute__ ((__packed__));
 
 static void register_header_check_pgdump(file_stat_t *file_stat);
 

@@ -38,7 +38,7 @@ struct abr_header
   char magic[4];
   char info[4];
   uint32_t size;
-} __attribute__ ((gcc_struct, __packed__));
+} __attribute__ ((__packed__));
 
 const file_hint_t file_hint_abr= {
   .extension="abr",

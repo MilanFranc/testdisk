@@ -151,11 +151,11 @@ char * strcasestr (const char *haystack, const char *needle)
     {
       if (toupper(*p) == toupper(*np))
       {
-	if (!*++np)
-	  return startn;
+        if (!*++np)
+          return startn;
       }
       else
-	np = NULL;
+        np = NULL;
     }
     else if (toupper(*p) == toupper(*needle))
     {

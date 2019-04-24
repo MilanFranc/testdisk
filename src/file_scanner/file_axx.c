@@ -47,7 +47,7 @@ struct SHeader
 {
   uint32_t aoLength;
   uint8_t   oType;
-} __attribute__ ((gcc_struct, __packed__));
+} __attribute__ ((__packed__));
 
 static void file_check_axx(file_recovery_t *fr)
 {

@@ -63,7 +63,7 @@ struct innodb_fil_header
   uint16_t type;
   uint64_t file_flush_lsn;
   uint32_t arch_log_no_or_space_id;
-} __attribute__ ((gcc_struct, __packed__));
+} __attribute__ ((__packed__));
 
 static int header_check_ibd(const unsigned char *buffer, const unsigned int buffer_size, const unsigned int safe_header_only, const file_recovery_t *file_recovery, file_recovery_t *file_recovery_new)
 {

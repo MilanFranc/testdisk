@@ -46,7 +46,7 @@ struct x4a_catalog
 {
   char type[4];
   uint32_t size;
-} __attribute__ ((gcc_struct, __packed__));
+} __attribute__ ((__packed__));
 
 static void file_check_x4a(file_recovery_t *fr)
 {

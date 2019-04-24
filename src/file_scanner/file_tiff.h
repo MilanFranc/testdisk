@@ -64,7 +64,7 @@ typedef struct {
 struct ifd_header {
   uint16_t nbr_fields;
   TIFFDirEntry ifd;
-} __attribute__ ((gcc_struct, __packed__));
+} __attribute__ ((__packed__));
 
 time_t get_date_from_tiff_header(const TIFFHeader *tiff, const unsigned int tiff_size);
 const char *find_tag_from_tiff_header(const TIFFHeader *tiff, const unsigned int tiff_size, const unsigned int tag, const char **potential_error);

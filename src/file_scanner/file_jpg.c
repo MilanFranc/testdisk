@@ -109,7 +109,7 @@ struct MP_IFD_Field
   uint16_t type;
   uint32_t count;
   char     value[0];
-} __attribute__ ((gcc_struct, __packed__));
+} __attribute__ ((__packed__));
 
 struct MP_Entry
 {
@@ -118,7 +118,7 @@ struct MP_Entry
   uint32_t offset;
   uint16_t dep1;
   uint16_t dep2;
-} __attribute__ ((gcc_struct, __packed__));
+} __attribute__ ((__packed__));
 
 static uint64_t check_mpo_be(const unsigned char *mpo, const uint64_t mpo_offset, const unsigned int size)
 {
@@ -1370,7 +1370,7 @@ struct sof_header
   uint16_t      width;          /* 1-65535 */
   unsigned char nbr;            /* 1-255 */
   unsigned char data[0];
-} __attribute__ ((gcc_struct, __packed__));
+} __attribute__ ((__packed__));
 
 static int jpg_check_sof0(const unsigned char *buffer, const unsigned int buffer_size, const unsigned int i)
 {

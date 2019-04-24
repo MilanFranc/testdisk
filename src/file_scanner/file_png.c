@@ -59,7 +59,7 @@ struct png_chunk
   uint32_t type;
   char data[0];
   /* data is followed by uint32_t crc; */
-} __attribute__ ((gcc_struct, __packed__));
+} __attribute__ ((__packed__));
 
 struct png_ihdr
 {
@@ -70,7 +70,7 @@ struct png_ihdr
   uint8_t  compression;
   uint8_t  filter;
   uint8_t  interlace;
-} __attribute__ ((gcc_struct, __packed__));
+} __attribute__ ((__packed__));
 
 static int header_check_jng(const unsigned char *buffer, const unsigned int buffer_size, const unsigned int safe_header_only, const file_recovery_t *file_recovery, file_recovery_t *file_recovery_new)
 {

@@ -52,7 +52,7 @@ struct pf_header
   char     name[60];
   uint32_t hash;
   uint32_t unknown2;
-} __attribute__ ((gcc_struct, __packed__));
+} __attribute__ ((__packed__));
 
 static void file_rename_pf(file_recovery_t *file_recovery)
 {

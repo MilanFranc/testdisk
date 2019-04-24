@@ -71,7 +71,7 @@ typedef struct {
   int64_t grain_offset;
   char filler[1];
   char check_bytes[4];
-} __attribute__((gcc_struct,__packed__)) VMDK4Header;
+} __attribute__((__packed__)) VMDK4Header;
 
 static int header_check_vmdk3(const unsigned char *buffer, const unsigned int buffer_size, const unsigned int safe_header_only, const file_recovery_t *file_recovery, file_recovery_t *file_recovery_new)
 {

@@ -48,7 +48,7 @@ struct rx2_header
 {
   uint32_t magic;
   uint32_t size;
-} __attribute__ ((gcc_struct, __packed__));
+} __attribute__ ((__packed__));
 
 static int header_check_rx2(const unsigned char *buffer, const unsigned int buffer_size, const unsigned int safe_header_only, const file_recovery_t *file_recovery, file_recovery_t *file_recovery_new)
 {

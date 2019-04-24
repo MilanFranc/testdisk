@@ -50,7 +50,7 @@ struct swf_header
   char magic[3];
   unsigned char version;
   uint32_t size;
-} __attribute__ ((gcc_struct, __packed__));
+} __attribute__ ((__packed__));
 
 struct swfz_header
 {
@@ -59,7 +59,7 @@ struct swfz_header
   uint32_t scriptLen;
   uint32_t compressedLen;
   uint8_t  LZMA_props[5];
-} __attribute__ ((gcc_struct, __packed__));
+} __attribute__ ((__packed__));
 // followed by LZMA data  and 6 bytes for LZMA end marker
 // scriptLen is the uncompressed length of the SWF data. Includes 4 bytes SWF header and
 // 4 bytes for scriptLen it

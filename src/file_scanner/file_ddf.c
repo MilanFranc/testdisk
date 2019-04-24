@@ -77,7 +77,7 @@ struct MasterHeader
   uint32_t m_n3DFlags; // reserved...currently unused
   /* Fields for v4 are added here*/
   char	   m_cRsvdData[120]; // (120) pad to 512 bytes
-} __attribute__ ((gcc_struct, __packed__));
+} __attribute__ ((__packed__));
 
 static int header_check_aux(const unsigned char *buffer, file_recovery_t *file_recovery_new)
 {

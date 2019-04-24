@@ -49,7 +49,7 @@ struct che_block
   uint32_t size;
   uint32_t unk1;
   uint32_t unk2;
-} __attribute__ ((gcc_struct, __packed__));
+} __attribute__ ((__packed__));
 
 
 static void file_check_che(file_recovery_t *file_recovery)

@@ -138,7 +138,7 @@ struct tdewf_file_header
          * 0x00 0x00
          */
         uint16_t fields_end;
-} __attribute__ ((gcc_struct, __packed__));
+} __attribute__ ((__packed__));
 
 
 struct info_file_struct

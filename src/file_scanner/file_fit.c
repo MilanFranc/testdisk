@@ -50,7 +50,7 @@ struct fits_header
     uint16_t profile_version;
     uint32_t data_size;
     char signature[4];
-} __attribute__ ((gcc_struct, __packed__));
+} __attribute__ ((__packed__));
 
 static int header_check_fit(const unsigned char *buffer, const unsigned int buffer_size, const unsigned int safe_header_only, const file_recovery_t *file_recovery, file_recovery_t *file_recovery_new)
 {

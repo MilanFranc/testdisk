@@ -53,7 +53,7 @@ struct rpmlead {
   uint16_t osnum;
   uint16_t signature_type;
   char reserved[16];
-} __attribute__ ((gcc_struct, __packed__));
+} __attribute__ ((__packed__));
 
 static void file_rename_rpm(file_recovery_t *file_recovery)
 {

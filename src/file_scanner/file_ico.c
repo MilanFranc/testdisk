@@ -77,7 +77,7 @@ struct ico_header
   uint16_t	reserved;
   uint16_t	type;
   uint16_t	count;
-} __attribute__ ((gcc_struct, __packed__));
+} __attribute__ ((__packed__));
 
 struct ico_directory
 {
@@ -89,7 +89,7 @@ struct ico_directory
   uint16_t	bits_per_pixel;
   uint32_t	bitmap_size;
   uint32_t	bitmap_offset;
-} __attribute__ ((gcc_struct, __packed__));
+} __attribute__ ((__packed__));
 
 static int header_check_ico(const unsigned char *buffer, const unsigned int buffer_size, const unsigned int safe_header_only, const file_recovery_t *file_recovery, file_recovery_t *file_recovery_new)
 {

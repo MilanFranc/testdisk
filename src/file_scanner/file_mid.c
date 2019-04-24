@@ -52,7 +52,7 @@ struct midi_header
   uint16_t format;
   uint16_t tracks;
   int16_t time_division;
-} __attribute__ ((gcc_struct, __packed__));
+} __attribute__ ((__packed__));
 
 static void file_check_midi(file_recovery_t *file_recovery)
 {

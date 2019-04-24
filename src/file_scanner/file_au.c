@@ -51,7 +51,7 @@ struct header_au_s
   uint32_t encoding;
   uint32_t sample_rate;
   uint32_t channels;
-} __attribute__ ((gcc_struct, __packed__));
+} __attribute__ ((__packed__));
 
 static int header_check_au(const unsigned char *buffer, const unsigned int buffer_size, const unsigned int safe_header_only, const file_recovery_t *file_recovery, file_recovery_t *file_recovery_new)
 {
@@ -63,7 +63,7 @@ static int header_check_au(const unsigned char *buffer, const unsigned int buffe
     if(be32(au->size)!=0xffffffff)
     {
       if(be32(au->offset)+be32(au->size) < 111)
-	return 0;
+        return 0;
       reset_file_recovery(file_recovery_new);
       file_recovery_new->min_filesize=111;
       file_recovery_new->extension=file_hint_au.extension;

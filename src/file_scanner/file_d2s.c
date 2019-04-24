@@ -47,7 +47,7 @@ struct d2s_header {
   uint32_t unk1;
   uint32_t unk2;
   char name[0];
-} __attribute__ ((gcc_struct, __packed__));
+} __attribute__ ((__packed__));
 
 static void file_rename_d2s(file_recovery_t *file_recovery)
 {

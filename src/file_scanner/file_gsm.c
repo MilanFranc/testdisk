@@ -48,7 +48,7 @@ struct block_header
 {
   unsigned char marker;
   unsigned char payload[32];
-} __attribute__ ((gcc_struct, __packed__));
+} __attribute__ ((__packed__));
 
 static data_check_t data_check_gsm(const unsigned char *buffer, const unsigned int buffer_size, file_recovery_t *file_recovery)
 {

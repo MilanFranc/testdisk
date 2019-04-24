@@ -53,7 +53,7 @@ struct hdr_header {
   uint16_t val0000_bis;
   uint32_t filesize;	/* 0x200 if cab */
   uint32_t val00000000_bis;
-} __attribute__ ((gcc_struct, __packed__));
+} __attribute__ ((__packed__));
 
 static int header_check_hdr(const unsigned char *buffer, const unsigned int buffer_size, const unsigned int safe_header_only, const file_recovery_t *file_recovery, file_recovery_t *file_recovery_new)
 {

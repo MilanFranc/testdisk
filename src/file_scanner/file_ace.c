@@ -56,7 +56,7 @@ struct header_ace {
                            bit 0 indicates if field add size is preset */
   uint32_t addsize;    /** an optional field which represents the size of
                            an additional block without specified structure */
-} __attribute__ ((gcc_struct, __packed__));
+} __attribute__ ((__packed__));
 
 typedef struct header_ace ace_header_t;
 #define BUF_SIZE 4096

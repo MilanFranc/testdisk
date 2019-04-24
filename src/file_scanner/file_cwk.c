@@ -62,7 +62,7 @@ struct cwk_header
   uint16_t	margins[6];
   uint16_t	inner_height;
   uint16_t	inner_width;
-} __attribute__ ((gcc_struct, __packed__));
+} __attribute__ ((__packed__));
 
 static void file_check_cwk(file_recovery_t *file_recovery)
 {

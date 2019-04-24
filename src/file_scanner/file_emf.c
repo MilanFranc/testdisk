@@ -77,7 +77,7 @@ struct EMF_HDR
   uint32_t nPalEntries;
   U_SIZEL szlDevice;
   U_SIZEL szlMillimeters;
-} __attribute__ ((gcc_struct, __packed__));
+} __attribute__ ((__packed__));
 
 #define EMR_HEADER	1
 #define EMR_POLYBEZIER	2

@@ -56,7 +56,7 @@ struct gzip_header
   uint32_t mtime;
   uint8_t  extra_flags;
   uint8_t  os;
-} __attribute__ ((gcc_struct, __packed__));
+} __attribute__ ((__packed__));
 
 /* flags:
    bit 0   FTEXT

@@ -52,7 +52,7 @@ struct ddh_struct
 {
   uint16_t	size;
   uint32_t	next;
-} __attribute__ ((gcc_struct, __packed__));
+} __attribute__ ((__packed__));
 
 struct dd_struct
 {
@@ -60,7 +60,7 @@ struct dd_struct
   uint16_t	ref;
   uint32_t	offset;
   uint32_t	length;
-} __attribute__ ((gcc_struct, __packed__));
+} __attribute__ ((__packed__));
 
 static void file_check_hdf(file_recovery_t *file_recovery)
 {
